@@ -1,0 +1,11 @@
+.logoLink {
+  transition: opacity ease 0.2s;
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  &:active {
+    opacity: 0.45;
+  }
+}

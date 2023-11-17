@@ -1,0 +1,9 @@
+.places {
+  padding-top: 92px;
+}
+
+.place {
+  &:not(:last-child) {
+    margin-bottom: 72px;
+  }
+}

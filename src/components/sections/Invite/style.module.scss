@@ -1,0 +1,59 @@
+.invite {
+  padding-top: 76px;
+}
+
+.title {
+  font-size: 54px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 32px;
+  display: block;
+}
+
+.subtitle {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.5;
+  display: block;
+}
+
+.article {
+  padding-top: 22px;
+  display: flex;
+  column-gap: 18px;
+}
+
+.articleText {
+  flex-basis: 70%;
+
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+  }
+}
+
+.articleTable {
+  font-size: 10px;
+
+  &FzMd {
+    font-size: 13px;
+  }
+
+  &Cell {
+    line-height: 1.5;
+    white-space: nowrap;
+  }
+
+  &Key {
+    font-weight: 700;
+  }
+
+  &Value {
+    font-weight: 400;
+  }
+
+  &Additional {
+    margin-top: 27px;
+  }
+}

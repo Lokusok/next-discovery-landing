@@ -1,0 +1,30 @@
+body {
+  background-color: #2a2c2f;
+  color: #fff;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1215px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  &-md {
+    max-width: 985px;
+  }
+}
+
+input,
+textarea,
+button,
+a {
+  font: inherit;
+  color: inherit;
+}
+
+main {
+  flex-grow: 1;
+}
