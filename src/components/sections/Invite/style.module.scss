@@ -20,7 +20,9 @@
 .article {
   padding-top: 22px;
   display: flex;
+  flex-wrap: wrap-reverse;
   column-gap: 18px;
+  row-gap: 39px;
 }
 
 .articleText {
@@ -55,5 +57,37 @@
 
   &Additional {
     margin-top: 27px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 770px) {
+  .articleText {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 410px) {
+  .inviteRow {
+    padding-top: 64px;
+  }
+
+  .article {
+    row-gap: 24px;
+  }
+
+  .title {
+    font-size: 32px;
+    margin-bottom: 23px;
+  }
+
+  .subtitle {
+    font-size: 24px;
+  }
+
+  .articleTable {
+    &Additional {
+      font-size: 12px;
+    }
   }
 }

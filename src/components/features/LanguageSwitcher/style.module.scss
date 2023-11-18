@@ -1,6 +1,10 @@
 .root {
   display: flex;
   column-gap: 18px;
+
+  @media (max-width: 340px) {
+    column-gap: 16px;
+  }
 }
 
 .btnLang {
@@ -34,6 +38,10 @@
 
   &:active {
     opacity: 0.5;
+  }
+
+  @media (max-width: 340px) {
+    font-size: 18px;
   }
 }
 

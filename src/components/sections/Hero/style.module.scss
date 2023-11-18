@@ -38,3 +38,39 @@
   font-weight: 400;
   letter-spacing: 15%;
 }
+
+@media (max-width: 890px) {
+  .title {
+    font-size: 40px;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+
+  .description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.45;
+  }
+}
+
+@media (max-width: 410px) {
+  .heroRow {
+    padding-top: 42px;
+  }
+
+  // .title {
+  //   font-size: 40px;
+  //   line-height: 1.1;
+  //   margin-bottom: 8px;
+  // }
+
+  // .description {
+  //   font-size: 16px;
+  //   font-weight: 400;
+  //   line-height: 1.45;
+  // }
+
+  .textInfo {
+    margin-bottom: 31px;
+  }
+}

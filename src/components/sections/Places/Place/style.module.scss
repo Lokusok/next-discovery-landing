@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 40px;
+  grid-row-gap: 16px;
   margin-bottom: 60px;
 }
 
@@ -45,6 +46,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 40px;
+  grid-row-gap: 24px;
 }
 
 .placeDescr {
@@ -63,4 +65,78 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media (max-width: 1030px) {
+  .header {
+    margin-bottom: 40px;
+  }
+
+  .header,
+  .placeRow {
+    grid-column-gap: 32px;
+  }
+
+  .placeDescr {
+    p:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@media (max-width: 770px) {
+  .title {
+    font-size: 42px;
+    line-height: 1.1;
+  }
+
+  .placeDescr {
+    p {
+      font-size: 16px;
+    }
+  }
+
+  .header,
+  .placeRow {
+    grid-column-gap: 28px;
+  }
+
+  .placeImage {
+    height: 340px;
+  }
+}
+
+@media (max-width: 620px) {
+  .header,
+  .placeRow {
+    grid-template-columns: 1fr;
+  }
+
+  .placeImage {
+    height: 375px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .link {
+    row-gap: 0;
+  }
+}
+
+@media (max-width: 410px) {
+  .placeImage {
+    height: 320px;
+  }
+
+  .placeDescr {
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .header {
+    margin-bottom: 32px;
+  }
 }

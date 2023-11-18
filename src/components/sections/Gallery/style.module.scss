@@ -24,3 +24,24 @@
     }
   }
 }
+
+@media (max-width: 1030px) {
+  .galleryRow {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 770px) {
+  .galleryRow {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 230px;
+  }
+}
+
+@media (max-width: 410px) {
+  .galleryRow {
+    padding-top: 32px;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 192px;
+  }
+}

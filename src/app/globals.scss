@@ -40,4 +40,13 @@ a {
 main {
   flex-grow: 1;
   margin-bottom: 160px;
+  overflow-x: hidden;
+
+  @media (max-width: 1030px) {
+    margin-bottom: 104px;
+  }
+
+  @media (max-width: 420px) {
+    margin-bottom: 48px;
+  }
 }

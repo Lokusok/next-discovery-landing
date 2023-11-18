@@ -4,8 +4,6 @@ import style from './style.module.scss';
 
 import Image from 'next/image';
 
-import classNames from 'classnames';
-
 import Fancybox from '@/components/features/Fancybox';
 
 export default function Gallery() {
