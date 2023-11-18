@@ -5,10 +5,11 @@ import style from './style.module.scss';
 type Props = {
   videoSource: string;
   isVisible: boolean;
+  onLoadedMetadata: () => void;
 };
 
 const Source = React.forwardRef<HTMLVideoElement, Props>(function Source(
-  { videoSource, isVisible },
+  { videoSource, isVisible, onLoadedMetadata },
   videoRef
 ) {
   return (
@@ -19,6 +20,7 @@ const Source = React.forwardRef<HTMLVideoElement, Props>(function Source(
         ref={videoRef}
         src={videoSource}
         controls={true}
+        onLoadedMetadata={onLoadedMetadata}
       ></video>
     </>
   );

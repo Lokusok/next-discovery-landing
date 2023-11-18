@@ -1,0 +1,62 @@
+.mapRow {
+  padding-top: 85px;
+}
+
+.headerWrapper {
+  margin-bottom: 48px;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.info {
+  margin-top: 48px;
+  display: flex;
+  column-gap: 120px;
+}
+
+.infoTextWrapper {
+  flex-basis: 33%;
+}
+
+.infoText {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.infoLink {
+  line-height: 1.7;
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+  flex-basis: 30%;
+}
+
+.infoLinkTitle {
+  color: #aaa;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 2.4px;
+}
+
+.infoLinkHref {
+  font-size: 18px;
+  font-weight: 400;
+  transition: opacity ease 0.2s;
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  &:active {
+    opacity: 0.45;
+  }
+}

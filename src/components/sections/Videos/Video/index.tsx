@@ -13,14 +13,14 @@ type Props = {} & VideoType;
 
 export default function Video(props: Props) {
   const videoRef = React.useRef<HTMLVideoElement>(null);
-  const [duration, setDuration] = React.useState('need normally duration');
+  const [duration, setDuration] = React.useState('');
   const [isVideoVisible, setIsVideoVisible] = React.useState(false);
 
-  React.useEffect(() => {
+  const handleVideoMetadata = () => {
     if (videoRef.current) {
       setDuration(getNormallyDuration(videoRef.current.duration));
     }
-  }, [videoRef]);
+  };
 
   const handleClickPreview = () => {
     if (videoRef.current) {
@@ -44,6 +44,7 @@ export default function Video(props: Props) {
         isVisible={isVideoVisible}
         ref={videoRef}
         videoSource={props.videoSource}
+        onLoadedMetadata={handleVideoMetadata}
       />
     </>
   );

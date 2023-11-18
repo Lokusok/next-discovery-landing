@@ -11,13 +11,16 @@
   "dependencies": {
     "@fancyapps/ui": "^5.0.28",
     "classnames": "^2.3.2",
+    "leaflet": "^1.9.4",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18",
+    "react-leaflet": "^4.2.1",
     "reset-css": "^5.0.2",
     "sass": "^1.69.5"
   },
   "devDependencies": {
+    "@types/leaflet": "^1.9.8",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

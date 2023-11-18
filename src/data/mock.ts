@@ -3,6 +3,7 @@ import {
   RecommendPlaceType,
   VideoType,
   PhotographerType,
+  BlazonryType,
 } from '../../types';
 
 export const places: PlaceType[] = [
@@ -125,5 +126,32 @@ export const photograhers: PhotographerType[] = [
     quote:
       '«Ты приезжаешь, и люди рассказывают тебе, как им плохо. А когда ты покажешь, как им плохо, то ты сволочь и всё очернил.»',
     name: 'Сергей Максимишин',
+  },
+];
+
+export const blazonries: BlazonryType[] = [
+  {
+    imageUrl: '/images/blazonry-1.png',
+    title: 'Великий Новгород',
+  },
+
+  {
+    imageUrl: '/images/blazonry-2.png',
+    title: 'Ростов Великий',
+  },
+
+  {
+    imageUrl: '/images/blazonry-3.png',
+    title: 'Тамбов',
+  },
+
+  {
+    imageUrl: '/images/blazonry-4.png',
+    title: 'Елабуга',
+  },
+
+  {
+    imageUrl: '/images/blazonry-5.png',
+    title: 'Пермь',
   },
 ];

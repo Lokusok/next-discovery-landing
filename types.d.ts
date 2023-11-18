@@ -32,3 +32,8 @@ export type PhotographerType = {
   quote: string;
   name: string;
 };
+
+export type BlazonryType = {
+  imageUrl: string;
+  title: string;
+};

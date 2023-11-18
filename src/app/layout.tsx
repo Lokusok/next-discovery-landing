@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import './globals.scss';
 
 import 'reset-css';
+
+import './globals.scss';
 
 const inter = Inter({ subsets: ['latin', 'cyrillic'] });
 
@@ -22,9 +23,7 @@ export default function RootLayout({ children }: Props) {
         <link rel="icon" href="/favicon.svg" />
       </head>
 
-      <body className={inter.className}>
-        <main className="main">{children}</main>
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

@@ -7,7 +7,7 @@ import classNames from 'classnames';
 type Props = {
   className?: string;
   children: React.ReactNode;
-  variant?: 'default' | 'big';
+  variant?: 'default' | 'big' | 'small';
 };
 
 export default function SectionTitle({ className, children, variant }: Props) {
