@@ -1,4 +1,6 @@
-export const places = [
+import { PlaceType } from '../../types';
+
+export const places: PlaceType[] = [
   {
     title: 'Куршская коса',
     url: { origin: '#', text: 'park-kosa.ru' },

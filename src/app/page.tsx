@@ -5,6 +5,8 @@ import Hero from '@/components/sections/Hero';
 import Invite from '@/components/sections/Invite';
 import Gallery from '@/components/sections/Gallery';
 import Places from '@/components/sections/Places';
+import Videos from '@/components/sections/Videos';
+import Recommendations from '@/components/sections/Recommendations';
 
 export default function RootPage() {
   return (
@@ -14,6 +16,8 @@ export default function RootPage() {
       <Invite />
       <Gallery />
       <Places />
+      <Videos />
+      <Recommendations />
     </>
   );
 }

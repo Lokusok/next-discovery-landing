@@ -1,0 +1,14 @@
+.videosRow {
+  padding-top: 102px;
+}
+
+.header {
+  margin-bottom: 72px;
+}
+
+.videosLine {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 323px;
+  grid-column-gap: 18px;
+}

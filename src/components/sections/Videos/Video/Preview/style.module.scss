@@ -1,0 +1,76 @@
+.preview {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: opacity ease 0.1s;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(#000, 0.5);
+    z-index: 5;
+    transition: opacity ease 0.2s;
+  }
+
+  &:hover::before {
+    opacity: 0.2;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.previewRow {
+  height: 100%;
+  padding: 30px;
+}
+
+.previewImage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.info {
+  position: relative;
+  z-index: 10;
+  line-height: 1.1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.duration {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 3.6px;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 18px;
+}
+
+.subtitle {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.playBtn {
+  position: absolute;
+  z-index: 10;
+}

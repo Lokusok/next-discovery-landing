@@ -7,16 +7,11 @@ import Image from 'next/image';
 
 import classNames from 'classnames';
 
+import { PlaceType } from '../../../../../types';
+
 type Props = {
   className?: string;
-  title: string;
-  url?: {
-    origin: string;
-    text: string;
-  };
-  description: string[];
-  imageUrl: string;
-};
+} & PlaceType;
 
 export default function Place({
   className,
@@ -43,7 +38,14 @@ export default function Place({
 
       <div className={style.placeRow}>
         <div className={style.placeImageBlock}>
-          <img className={style.placeImage} src={imageUrl} alt={title} />
+          <Image
+            className={style.placeImage}
+            src={imageUrl}
+            alt={title}
+            width="0"
+            height="0"
+            sizes="100vw"
+          />
         </div>
 
         <div className={style.placeDescr}>
