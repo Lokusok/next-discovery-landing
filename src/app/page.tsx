@@ -7,6 +7,7 @@ import Gallery from '@/components/sections/Gallery';
 import Places from '@/components/sections/Places';
 import Videos from '@/components/sections/Videos';
 import Recommendations from '@/components/sections/Recommendations';
+import Photographers from '@/components/sections/Photographers';
 
 export default function RootPage() {
   return (
@@ -18,6 +19,7 @@ export default function RootPage() {
       <Places />
       <Videos />
       <Recommendations />
+      <Photographers />
     </>
   );
 }

@@ -11,12 +11,20 @@ type Props = {
   className?: string;
   title: string;
   subtitle: string;
+  variant?: 'default' | 'big';
 };
 
-export default function SectionHeader({ className, title, subtitle }: Props) {
+export default function SectionHeader({
+  className,
+  title,
+  subtitle,
+  variant,
+}: Props) {
   return (
     <div className={classNames(className, style.sectionHeader)}>
-      <SectionTitle className={style.title}>{title}</SectionTitle>
+      <SectionTitle className={style.title} variant={variant}>
+        {title}
+      </SectionTitle>
       <SectionSubTitle>{subtitle}</SectionSubTitle>
     </div>
   );

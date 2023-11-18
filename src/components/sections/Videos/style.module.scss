@@ -4,11 +4,12 @@
 
 .header {
   margin-bottom: 72px;
+  max-width: 745px;
 }
 
 .videosLine {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: 323px;
-  grid-column-gap: 18px;
+  grid-gap: 18px;
 }

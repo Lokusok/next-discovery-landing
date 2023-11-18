@@ -2,18 +2,14 @@
 
 import React from 'react';
 
-import ReactPlayer from 'react-player';
-
-import style from './style.module.scss';
-
 import { getNormallyDuration } from '@/utils/videos';
 
 import Preview from './Preview';
 import Source from './Source';
 
-import { PreviewType, SourceType } from '../../../../../types';
+import { VideoType } from '../../../../../types';
 
-type Props = {} & PreviewType & SourceType;
+type Props = {} & VideoType;
 
 export default function Video(props: Props) {
   const videoRef = React.useRef<HTMLVideoElement>(null);

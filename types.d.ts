@@ -18,3 +18,17 @@ export type PreviewType = {
 export type SourceType = {
   videoSource: string;
 };
+
+export type VideoType = PreviewType & SourceType;
+
+export type RecommendPlaceType = {
+  imageUrl: string;
+  title: string;
+  description?: string;
+};
+
+export type PhotographerType = {
+  imageUrl: string;
+  quote: string;
+  name: string;
+};

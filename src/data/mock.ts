@@ -1,4 +1,9 @@
-import { PlaceType } from '../../types';
+import {
+  PlaceType,
+  RecommendPlaceType,
+  VideoType,
+  PhotographerType,
+} from '../../types';
 
 export const places: PlaceType[] = [
   {
@@ -56,5 +61,69 @@ export const places: PlaceType[] = [
       'Сибирь заканчивается не на Урале, а в Карелии: образующая тайгу сибирская лиственница не растёт западнее Водлозера. Зато здесь она вымахивает на 30 метров — леса карельских национальных парков из-за непроходимых болот никогда не знали топора. Некоторым соснам уже больше чем полтысячелетия. Прикоснитесь к живому существу, видевшему солнце раньше, чем увидал его Иван Грозный. В девственном лесу на сотню километров не встретишь тропы. А на редких тропинках деревья в паре метров от земли помечены медвежьими когтями. Чтобы все знали, кто тут хозяин.',
     ],
     imageUrl: '/images/place-5.jpg',
+  },
+];
+
+export const videos: VideoType[] = [
+  {
+    imageUrl: '/images/video-preview-1.jpg',
+    title: 'Colors of Kamchatka',
+    subtitle: 'Director: Pavel Karykhalin',
+    videoSource: '/videos/video-1.mp4',
+  },
+
+  {
+    imageUrl: '/images/video-preview-2.jpg',
+    title: 'Обсерватория | Observatory',
+    subtitle: 'Director: Alexander Khudokon',
+    videoSource: '/videos/video-2.mp4',
+  },
+];
+
+export const recommendPlaces: RecommendPlaceType[] = [
+  {
+    imageUrl: '/images/recommend-place-1.jpg',
+    title: 'Новороссийская бухта',
+    description:
+      'Главный торговый порт не курорт, но море здесь лазурное, и толпы кораблей на рейде. Залюбуешься.',
+  },
+  {
+    imageUrl: '/images/recommend-place-2.jpg',
+    title: 'Аракульский шихан',
+    description:
+      'Даже для Южного Урала, где красиво везде, это пейзаж выдающийся. И там отсутствует несносная мошкá.',
+  },
+  {
+    imageUrl: '/images/recommend-place-3.jpg',
+    title: 'Череповец',
+    description:
+      'Громадный металлургический комбинат на водном пути с Волги в Балтийское море. В нём есть своя красота.',
+  },
+  {
+    imageUrl: '/images/recommend-place-4.jpg',
+    title: 'Никола-Ленивец',
+    description:
+      'Оцените ответ современных художников идолам капища, которое было тут при древнем поселении на реке Угра.',
+  },
+];
+
+export const photograhers: PhotographerType[] = [
+  {
+    imageUrl: '/images/photographer-1.jpg',
+    quote:
+      '«Если вам кажется, что в России ничего не происходит, то просто выгляньте “наружу”…»',
+    name: 'Виктор Лягушкин',
+  },
+  {
+    imageUrl: '/images/photographer-2.jpg',
+    quote:
+      '«Если в город едут туристы — неважно за чем они туда едут: за шамбалой или фрески Рублева искать, или на родину Тарковского — туристы обеспечивают любой город молодёжью, рабочими местами и в конечном счёте наполняют его жизнью.»',
+    name: 'Иван Хафизов',
+  },
+  {
+    imageUrl: '/images/photographer-3.jpg',
+    quote:
+      '«Ты приезжаешь, и люди рассказывают тебе, как им плохо. А когда ты покажешь, как им плохо, то ты сволочь и всё очернил.»',
+    name: 'Сергей Максимишин',
   },
 ];

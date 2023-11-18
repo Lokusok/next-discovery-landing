@@ -7,8 +7,17 @@ import classNames from 'classnames';
 type Props = {
   className?: string;
   children: React.ReactNode;
+  variant?: 'default' | 'big';
 };
 
-export default function SectionTitle({ className, children }: Props) {
-  return <h2 className={classNames(className, style.title)}>{children}</h2>;
+export default function SectionTitle({ className, children, variant }: Props) {
+  return (
+    <h2
+      className={classNames(className, style.title, {
+        [style.bigLnh]: variant === 'big',
+      })}
+    >
+      {children}
+    </h2>
+  );
 }

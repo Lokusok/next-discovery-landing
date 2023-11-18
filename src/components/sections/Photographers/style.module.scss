@@ -1,0 +1,14 @@
+.photographers {
+  padding-top: 132px;
+}
+
+.header {
+  max-width: 800px;
+  margin-bottom: 71px;
+}
+
+.photographersLine {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 19px;
+}
