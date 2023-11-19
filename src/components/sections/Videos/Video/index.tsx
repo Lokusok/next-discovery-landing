@@ -17,10 +17,16 @@ export default function Video(props: Props) {
   const [isVideoVisible, setIsVideoVisible] = React.useState(false);
 
   const handleVideoMetadata = () => {
-    if (videoRef.current) {
+    if (duration.length === 0 && videoRef.current) {
       setDuration(getNormallyDuration(videoRef.current.duration));
     }
   };
+
+  React.useEffect(() => {
+    if (videoRef.current && videoRef.current.duration) {
+      setDuration(getNormallyDuration(videoRef.current.duration));
+    }
+  }, [videoRef]);
 
   const handleClickPreview = () => {
     if (videoRef.current) {
