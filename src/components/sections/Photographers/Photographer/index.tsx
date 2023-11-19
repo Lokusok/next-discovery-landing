@@ -13,9 +13,18 @@ type Props = {
 export default function Photographer({ imageUrl, quote, name }: Props) {
   return (
     <article className={style.photographer}>
-      <img className={style.avatar} src={imageUrl} alt={name} />
-      <p className={style.quote}>{quote}</p>
-      <span className={style.name}>{name}</span>
+      <Image
+        className={style.avatar}
+        src={imageUrl}
+        alt={name}
+        width="97"
+        height="97"
+      />
+
+      <div className={style.info}>
+        <p className={style.quote}>{quote}</p>
+        <span className={style.name}>{name}</span>
+      </div>
     </article>
   );
 }

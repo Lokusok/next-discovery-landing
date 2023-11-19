@@ -19,13 +19,18 @@ body {
   flex-direction: column;
 }
 
+:root {
+  --default-mw: 1215px;
+  --md-ww: 985px;
+}
+
 .container {
-  max-width: 1215px;
+  max-width: var(--default-mw);
   margin: 0 auto;
   padding: 0 15px;
 
   &-md {
-    max-width: 985px;
+    max-width: var(--md-ww);
   }
 }
 
@@ -48,5 +53,9 @@ main {
 
   @media (max-width: 420px) {
     margin-bottom: 48px;
+  }
+
+  @media (max-width: 320px) {
+    margin-bottom: 64px;
   }
 }

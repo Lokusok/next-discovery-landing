@@ -9,7 +9,7 @@ import { places } from '@/data/mock';
 export default function Places() {
   return (
     <section className={style.places}>
-      <div className="container container-md">
+      <div className={style.container}>
         <div className={style.placesRow}>
           {places.map((place) => (
             <Place key={place.title} className={style.place} {...place} />

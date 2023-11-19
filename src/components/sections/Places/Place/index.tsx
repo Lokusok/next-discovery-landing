@@ -22,7 +22,7 @@ export default function Place({
 }: Props) {
   return (
     <article className={classNames(className, style.place)}>
-      <header className={style.header}>
+      <header className={classNames(style.container, style.header)}>
         <h3 className={style.title}>{title}</h3>
         {url && (
           <div className={style.link}>
@@ -48,7 +48,7 @@ export default function Place({
           />
         </div>
 
-        <div className={style.placeDescr}>
+        <div className={classNames(style.container, style.placeDescr)}>
           {description.map((text, index) => (
             <p key={index}>{text}</p>
           ))}

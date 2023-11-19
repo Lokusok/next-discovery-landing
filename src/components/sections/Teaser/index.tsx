@@ -9,7 +9,7 @@ import Fancybox from '@/components/features/Fancybox';
 export default function Teaser() {
   return (
     <section className={style.teaser}>
-      <div className="container">
+      <div className={style.container}>
         <div className={style.teaserRow}>
           <div className={style.teaserBlock}>
             <Image

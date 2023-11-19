@@ -41,6 +41,7 @@
   font-size: 27px;
   font-weight: 900;
   line-height: 1.1;
+  overflow-wrap: break-word;
   transition: transform ease 0.85s;
 }
 
@@ -69,4 +70,10 @@
   justify-content: space-between;
   height: 100%;
   padding: 30px 18px;
+}
+
+@media (max-width: 1030px) {
+  .placeRow {
+    padding: 24px 16px;
+  }
 }

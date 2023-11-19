@@ -4,6 +4,8 @@
   grid-column-gap: 40px;
   grid-row-gap: 16px;
   margin-bottom: 60px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .title {
@@ -47,6 +49,13 @@
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 40px;
   grid-row-gap: 24px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container {
+  padding: 0;
+  max-width: var(--md-ww);
 }
 
 .placeDescr {
@@ -110,6 +119,11 @@
   .header,
   .placeRow {
     grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .container {
+    padding: 0 15px;
   }
 
   .placeImage {

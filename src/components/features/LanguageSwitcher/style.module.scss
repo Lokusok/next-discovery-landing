@@ -47,6 +47,8 @@
 
 .btnLangActive {
   cursor: default;
+  user-select: none;
+  pointer-events: none;
 
   &::before {
     opacity: 1 !important;

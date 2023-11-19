@@ -2,6 +2,12 @@
   padding-top: 103px;
 }
 
+.container {
+  max-width: var(--md-ww);
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 .place {
   &:not(:last-child) {
     margin-bottom: 72px;
@@ -13,5 +19,21 @@
     &:not(:last-child) {
       margin-bottom: 48px;
     }
+  }
+
+  .placesRow {
+    padding-top: 72px;
+  }
+}
+
+@media (max-width: 620px) {
+  .container {
+    padding: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .placesRow {
+    padding-top: 64px;
   }
 }

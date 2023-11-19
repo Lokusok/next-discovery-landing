@@ -11,4 +11,28 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 19px;
+  grid-row-gap: 60px;
+}
+
+@media (max-width: 770px) {
+  .photographersLine {
+    grid-template-columns: minmax(min-content, 344px);
+    justify-content: center;
+  }
+
+  .header {
+    margin-bottom: 66px;
+  }
+}
+
+@media (max-width: 690px) {
+  .photographersRow {
+    padding-top: 64px;
+  }
+}
+
+@media (max-width: 420px) {
+  .header {
+    margin-bottom: 42px;
+  }
 }

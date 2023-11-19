@@ -11,5 +11,37 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: 323px;
-  grid-gap: 18px;
+  grid-column-gap: 18px;
+  grid-row-gap: 8px;
+}
+
+@media (max-width: 770px) {
+  .header {
+    margin-bottom: 56px;
+  }
+
+  .videosLine {
+    grid-auto-rows: 200px;
+  }
+}
+
+@media (max-width: 670px) {
+  .videosRow {
+    padding-top: 64px;
+  }
+
+  .header {
+    margin-bottom: 32px;
+  }
+
+  .videosLine {
+    grid-template-columns: 343px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .videosLine {
+    grid-template-columns: 288px;
+  }
 }
