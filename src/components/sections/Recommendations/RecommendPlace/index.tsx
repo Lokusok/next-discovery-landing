@@ -20,7 +20,6 @@ export default function RecommendPlace({
   const imageRef = React.useRef<HTMLImageElement>(null);
 
   const handleClick = () => {
-    console.log('click', title);
     imageRef.current?.click();
   };
 

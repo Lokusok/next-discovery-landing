@@ -2,15 +2,35 @@ import React from 'react';
 
 import style from './style.module.scss';
 
+import Link from 'next/link';
+
 import classNames from 'classnames';
 
-export default function LanguageSwitcher() {
+import { LanguagesType } from '../../../../types';
+
+type Props = {
+  locale: LanguagesType;
+};
+
+export default function LanguageSwitcher({ locale }: Props) {
   return (
     <div className={style.root}>
-      <button className={classNames(style.btnLang, style.btnLangActive)}>
+      <Link
+        href="/ru"
+        className={classNames(style.btnLang, {
+          [style.btnLangActive]: locale === 'ru',
+        })}
+      >
         Ru
-      </button>
-      <button className={style.btnLang}>En</button>
+      </Link>
+      <Link
+        href="/en"
+        className={classNames(style.btnLang, {
+          [style.btnLangActive]: locale === 'en',
+        })}
+      >
+        En
+      </Link>
     </div>
   );
 }

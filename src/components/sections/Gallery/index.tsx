@@ -6,121 +6,28 @@ import Image from 'next/image';
 
 import Fancybox from '@/components/features/Fancybox';
 
+import { useTranslations } from 'next-intl';
+
 export default function Gallery() {
+  const t = useTranslations('Index.gallery');
+
   return (
     <section className={style.gallery}>
       <div className="container">
         <div>
           <Fancybox className={style.galleryRow}>
-            <Image
-              data-fancybox="gallery"
-              className={style.galleryImage}
-              src="/images/gallery-1.jpg"
-              alt="Изображение природы"
-              width="0"
-              height="0"
-              sizes="100vw"
-            />
-
-            <Image
-              data-fancybox="gallery"
-              className={style.galleryImage}
-              src="/images/gallery-2.jpg"
-              alt="Изображение природы"
-              width="0"
-              height="0"
-              sizes="100vw"
-            />
-            <Image
-              data-fancybox="gallery"
-              className={style.galleryImage}
-              src="/images/gallery-3.jpg"
-              alt="Изображение природы"
-              width="0"
-              height="0"
-              sizes="100vw"
-            />
-            <Image
-              data-fancybox="gallery"
-              className={style.galleryImage}
-              src="/images/gallery-4.jpg"
-              alt="Изображение природы"
-              width="0"
-              height="0"
-              sizes="100vw"
-            />
-            <Image
-              data-fancybox="gallery"
-              className={style.galleryImage}
-              src="/images/gallery-5.jpg"
-              alt="Изображение природы"
-              width="0"
-              height="0"
-              sizes="100vw"
-            />
-            <Image
-              data-fancybox="gallery"
-              className={style.galleryImage}
-              src="/images/gallery-6.jpg"
-              alt="Изображение природы"
-              width="0"
-              height="0"
-              sizes="100vw"
-            />
-            <Image
-              data-fancybox="gallery"
-              className={style.galleryImage}
-              src="/images/gallery-7.jpg"
-              alt="Изображение природы"
-              width="0"
-              height="0"
-              sizes="100vw"
-            />
-            <Image
-              data-fancybox="gallery"
-              className={style.galleryImage}
-              src="/images/gallery-8.jpg"
-              alt="Изображение природы"
-              width="0"
-              height="0"
-              sizes="100vw"
-            />
-            <Image
-              data-fancybox="gallery"
-              className={style.galleryImage}
-              src="/images/gallery-9.jpg"
-              alt="Изображение природы"
-              width="0"
-              height="0"
-              sizes="100vw"
-            />
-            <Image
-              data-fancybox="gallery"
-              className={style.galleryImage}
-              src="/images/gallery-10.jpg"
-              alt="Изображение природы"
-              width="0"
-              height="0"
-              sizes="100vw"
-            />
-            <Image
-              data-fancybox="gallery"
-              className={style.galleryImage}
-              src="/images/gallery-11.jpg"
-              alt="Изображение природы"
-              width="0"
-              height="0"
-              sizes="100vw"
-            />
-            <Image
-              data-fancybox="gallery"
-              className={style.galleryImage}
-              src="/images/gallery-12.jpg"
-              alt="Изображение природы"
-              width="0"
-              height="0"
-              sizes="100vw"
-            />
+            {new Array(12).fill(null).map((el, index) => (
+              <Image
+                key={index}
+                data-fancybox="gallery"
+                className={style.galleryImage}
+                src={`/images/gallery-${index + 1}.jpg`}
+                alt={t('imageAlt')}
+                width="0"
+                height="0"
+                sizes="100vw"
+              />
+            ))}
           </Fancybox>
         </div>
       </div>

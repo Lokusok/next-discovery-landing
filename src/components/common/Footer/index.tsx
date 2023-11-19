@@ -4,38 +4,76 @@ import style from './style.module.scss';
 
 import Link from 'next/link';
 
-export default function Footer() {
+import { LanguagesType } from '../../../../types';
+
+const localesNav = {
+  en: [
+    {
+      text: 'Maps',
+      href: '#',
+    },
+    {
+      text: 'Weather',
+      href: '#',
+    },
+    {
+      text: 'Schedule',
+      href: '#',
+    },
+    {
+      text: 'Calendar',
+      href: '#',
+    },
+    {
+      text: 'Tours',
+      href: '#',
+    },
+  ],
+
+  ru: [
+    {
+      text: 'Карты',
+      href: '#',
+    },
+    {
+      text: 'Погода',
+      href: '#',
+    },
+    {
+      text: 'Расписание',
+      href: '#',
+    },
+    {
+      text: 'Календарь',
+      href: '#',
+    },
+    {
+      text: 'Путешествия',
+      href: '#',
+    },
+  ],
+};
+
+type Props = {
+  locale: LanguagesType;
+};
+
+export default function Footer({ locale }: Props) {
+  const links = localesNav[locale];
+
   return (
     <footer className={style.footer}>
       <div className="container">
         <div className={style.footerRow}>
           <nav className={style.nav}>
             <ul className={style.list}>
-              <li className={style.listItem}>
-                <Link className={style.listLink} href="#">
-                  Карты
-                </Link>
-              </li>
-              <li className={style.listItem}>
-                <Link className={style.listLink} href="#">
-                  Погода
-                </Link>
-              </li>
-              <li className={style.listItem}>
-                <Link className={style.listLink} href="#">
-                  Расписание
-                </Link>
-              </li>
-              <li className={style.listItem}>
-                <Link className={style.listLink} href="#">
-                  Календарь
-                </Link>
-              </li>
-              <li className={style.listItem}>
-                <Link className={style.listLink} href="#">
-                  Путешествия
-                </Link>
-              </li>
+              {links.map((link, index) => (
+                <li key={index} className={style.listItem}>
+                  <Link className={style.listLink} href={link.href}>
+                    {link.text}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
 

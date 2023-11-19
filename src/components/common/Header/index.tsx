@@ -8,7 +8,13 @@ import Link from 'next/link';
 import Logo from '../Logo';
 import LanguageSwitcher from '../../features/LanguageSwitcher';
 
-export default function Header() {
+import { LanguagesType } from '../../../../types';
+
+type Props = {
+  locale: LanguagesType;
+};
+
+export default function Header({ locale }: Props) {
   return (
     <header className={style.header}>
       <div className="container">
@@ -17,7 +23,7 @@ export default function Header() {
             <Logo />
           </Link>
 
-          <LanguageSwitcher />
+          <LanguageSwitcher locale={locale} />
         </div>
       </div>
     </header>

@@ -8,19 +8,26 @@ import Blazonry from './Blazonry';
 
 import { blazonries } from '@/data/mock';
 
+import { useTranslations, useLocale } from 'next-intl';
+
+import { LanguagesType } from '../../../../types';
+
 export default function Blazonries() {
+  const t = useTranslations('Index.blazonries');
+  const locale = useLocale();
+
   return (
     <section className={style.blazonries}>
       <div className="container">
         <div className={style.blazonriesRow}>
           <SectionHeader
             className={style.header}
-            title="Природа на гербах российских городов"
+            title={t('title')}
             variant="small"
           />
 
           <div className={style.blazonriesLine}>
-            {blazonries.map((blazonry, index) => (
+            {blazonries[locale as LanguagesType].map((blazonry, index) => (
               <Blazonry key={index} {...blazonry} />
             ))}
           </div>

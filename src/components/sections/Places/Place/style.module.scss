@@ -49,13 +49,11 @@
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 40px;
   grid-row-gap: 24px;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .container {
   padding: 0;
-  max-width: var(--md-ww);
+  max-width: var(--md-mw);
 }
 
 .placeDescr {

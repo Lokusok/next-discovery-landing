@@ -21,7 +21,7 @@ body {
 
 :root {
   --default-mw: 1215px;
-  --md-ww: 985px;
+  --md-mw: 985px;
 }
 
 .container {
@@ -30,7 +30,7 @@ body {
   padding: 0 15px;
 
   &-md {
-    max-width: var(--md-ww);
+    max-width: var(--md-mw);
   }
 }
 
@@ -45,7 +45,7 @@ a {
 main {
   flex-grow: 1;
   margin-bottom: 160px;
-  overflow-x: hidden;
+  overflow: hidden;
 
   @media (max-width: 1030px) {
     margin-bottom: 104px;

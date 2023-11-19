@@ -8,21 +8,30 @@ import Photographer from './Photographer';
 
 import { photograhers } from '@/data/mock';
 
+import { useTranslations, useLocale } from 'next-intl';
+
+import { LanguagesType } from '../../../../types';
+
 export default function Photographers() {
+  const t = useTranslations('Index.photographers');
+  const locale = useLocale();
+
   return (
     <section className={style.photographers}>
       <div className="container">
         <div className={style.photographersRow}>
           <SectionHeader
             className={style.header}
-            title="Фотографы, снимающие Россию"
-            subtitle="Природа и люди вдохновили их работы, удостоенные наград на международных конкурсах"
+            title={t('title')}
+            subtitle={t('subtitle')}
           />
 
           <div className={style.photographersLine}>
-            {photograhers.map((photographer, index) => (
-              <Photographer key={index} {...photographer} />
-            ))}
+            {photograhers[locale as LanguagesType].map(
+              (photographer, index) => (
+                <Photographer key={index} {...photographer} />
+              )
+            )}
           </div>
         </div>
       </div>

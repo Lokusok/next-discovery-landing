@@ -37,3 +37,5 @@ export type BlazonryType = {
   imageUrl: string;
   title: string;
 };
+
+export type LanguagesType = 'ru' | 'en';

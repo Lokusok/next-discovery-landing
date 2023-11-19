@@ -7,7 +7,14 @@ import Video from './Video';
 
 import { videos } from '@/data/mock';
 
+import { useTranslations, useLocale } from 'next-intl';
+
+import { LanguagesType } from '../../../../types';
+
 export default function Videos() {
+  const t = useTranslations('Index.videos');
+  const locale = useLocale();
+
   return (
     <section className={style.videos}>
       <div className="container">
@@ -15,12 +22,12 @@ export default function Videos() {
           <SectionHeader
             className={style.header}
             variant="big"
-            title="В глубины Земли и в дальний космос"
-            subtitle="Видео от студии Stereotactic о местах в России, где ведутся фундаментальные исследования"
+            title={t('title')}
+            subtitle={t('subtitle')}
           />
 
           <div className={style.videosLine}>
-            {videos.map((video, index) => (
+            {videos[locale as LanguagesType].map((video, index) => (
               <Video key={index} {...video} />
             ))}
           </div>

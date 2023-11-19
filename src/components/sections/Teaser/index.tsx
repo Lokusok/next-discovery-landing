@@ -6,7 +6,12 @@ import Image from 'next/image';
 
 import Fancybox from '@/components/features/Fancybox';
 
+import { useTranslations, useLocale } from 'next-intl';
+
 export default function Teaser() {
+  const t = useTranslations('Index.teaser');
+  const locale = useLocale();
+
   return (
     <section className={style.teaser}>
       <div className={style.container}>
@@ -15,7 +20,7 @@ export default function Teaser() {
             <Image
               className={style.teaserImage}
               src="/images/teaser-image.jpg"
-              alt="До Байкала «на собаках»"
+              alt={t('title')}
               fill
             />
 
@@ -26,13 +31,12 @@ export default function Teaser() {
                 data-src="/videos/teaser.mp4"
                 className={style.teaserInfo}
                 role="button"
-                aria-label="Воспроизвести видео"
+                aria-label={
+                  locale === 'ru' ? 'Воспроизвести видео' : 'Play video'
+                }
               >
-                <h2 className={style.title}>До Байкала «на собаках»</h2>
-                <p className={style.descr}>
-                  По мотивам учебной темы о Транссибе и iframes — путешествие от
-                  столицы до Байкала на электричках.
-                </p>
+                <h2 className={style.title}>{t('title')}</h2>
+                <p className={style.descr}>{t('subtitle')}</p>
               </div>
             </Fancybox>
           </div>
