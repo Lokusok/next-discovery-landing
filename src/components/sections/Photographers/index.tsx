@@ -26,13 +26,15 @@ export default function Photographers() {
             subtitle={t('subtitle')}
           />
 
-          <div className={style.photographersLine}>
+          <ul className={style.photographersLine}>
             {photograhers[locale as LanguagesType].map(
               (photographer, index) => (
-                <Photographer key={index} {...photographer} />
+                <li key={index}>
+                  <Photographer {...photographer} />
+                </li>
               )
             )}
-          </div>
+          </ul>
         </div>
       </div>
     </section>

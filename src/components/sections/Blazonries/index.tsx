@@ -26,11 +26,13 @@ export default function Blazonries() {
             variant="small"
           />
 
-          <div className={style.blazonriesLine}>
+          <ul className={style.blazonriesLine}>
             {blazonries[locale as LanguagesType].map((blazonry, index) => (
-              <Blazonry key={index} {...blazonry} />
+              <li key={index}>
+                <Blazonry {...blazonry} />
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </section>

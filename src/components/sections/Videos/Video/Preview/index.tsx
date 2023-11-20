@@ -28,12 +28,7 @@ export default function Preview({
   return (
     <div className={style.preview} onClick={onClick}>
       <div className={style.previewRow}>
-        <Image
-          className={style.previewImage}
-          src={imageUrl}
-          alt={`${title} превью`}
-          fill
-        />
+        <Image className={style.previewImage} src={imageUrl} alt={title} fill />
         <div className={style.playBtn}>
           <Image src={PlayIcon} alt="" aria-hidden={true} />
         </div>

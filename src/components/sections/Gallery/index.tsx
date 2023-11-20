@@ -14,22 +14,23 @@ export default function Gallery() {
   return (
     <section className={style.gallery}>
       <div className="container">
-        <div>
+        <ul>
           <Fancybox className={style.galleryRow}>
-            {new Array(12).fill(null).map((el, index) => (
-              <Image
-                key={index}
-                data-fancybox="gallery"
-                className={style.galleryImage}
-                src={`/images/gallery-${index + 1}.jpg`}
-                alt={t('imageAlt')}
-                width="0"
-                height="0"
-                sizes="100vw"
-              />
+            {new Array(12).fill(null).map((_, index) => (
+              <li key={index}>
+                <Image
+                  data-fancybox="gallery"
+                  className={style.galleryImage}
+                  src={`/images/gallery-${index + 1}.jpg`}
+                  alt={t('imageAlt')}
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                />
+              </li>
             ))}
           </Fancybox>
-        </div>
+        </ul>
       </div>
     </section>
   );
