@@ -27,6 +27,7 @@ export default function Hero() {
             width="0"
             height="0"
             sizes="100vw"
+            priority={true}
           />
           <div className={style.container}>
             <span className={style.wrapperNote}>{t('underImage')}</span>
